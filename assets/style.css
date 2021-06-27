@@ -76,7 +76,7 @@ body {
 }
 
 .game__header__logo {
-    background-image: url(/images/logo.svg);
+    background-image: url(../images/logo.svg);
     background-size: contain;
     width: 50%;
     height: 100%;
