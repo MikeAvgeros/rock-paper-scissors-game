@@ -79,12 +79,16 @@ function displayCurrentChoices(playerPick, computerPick) {
         playerChoice.style.gridArea = 'bottom';
         playerChoice.style.marginBottom = '10rem';
     } else {
+        const youChose = document.querySelector('#you-chose');
+        const houseChose = document.querySelector('#house-chose');
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'left';
         playerChoice.style.marginBottom = '6.25rem';
         computerChoice.style.display = 'grid';
         computerChoice.style.gridArea = 'right';
         computerChoice.style.marginBottom = '6.25rem';
+        youChose.style.opacity = "1";
+        houseChose.style.opacity = "1";
     }
 }
 

@@ -35,8 +35,8 @@ html {
 
 body {
     font-family: 'Barlow Semi Condensed',  Helvetica, sans-serif;
-    min-height: 100vh;
-    width: 100vh;
+    height: 100vh;
+    width: 100%;
     display: grid;
     color: var(--headerOutline);
     font-size: 16px;
@@ -114,12 +114,28 @@ body {
     grid-template-rows: .5fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "....   ......"
+    "you     house"
     "left    right"
     "bottom bottom";
     row-gap: 3vw;
     place-content: center center;
     position: relative;
+}
+
+#you-chose {
+    display: grid;
+    grid-area: you;
+    justify-self: center; 
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+#house-chose {
+    display: grid;
+    grid-area: house;
+    justify-self: center; 
+    font-size: 1.5rem;
+    opacity: 0;
 }
 
 #paper {
@@ -189,7 +205,7 @@ body {
 
 .attribution {
     grid-area: attribution;
-    padding-top: 5rem;
+    padding-top: 4rem;
     font-size: 12px;
     text-align: center;
 }
