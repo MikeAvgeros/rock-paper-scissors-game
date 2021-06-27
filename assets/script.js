@@ -81,10 +81,10 @@ function displayCurrentChoices(playerPick, computerPick) {
     } else {
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'left';
-        playerChoice.style.marginBottom = '6rem';
+        playerChoice.style.marginBottom = '6.25rem';
         computerChoice.style.display = 'grid';
         computerChoice.style.gridArea = 'right';
-        computerChoice.style.marginBottom = '6rem';
+        computerChoice.style.marginBottom = '6.25rem';
     }
 }
 
