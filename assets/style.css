@@ -124,7 +124,7 @@ body {
 
 #paper {
     cursor: pointer;
-    background-image: url(/images/icon-paper.svg);
+    background-image: url(../images/icon-paper.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
@@ -140,7 +140,7 @@ body {
 
 #rock {
     cursor: pointer;
-    background-image: url(/images/icon-rock.svg);
+    background-image: url(../images/icon-rock.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
@@ -156,7 +156,7 @@ body {
 
 #scissors {
     cursor: pointer;
-    background-image: url(/images/icon-scissors.svg);
+    background-image: url(../images/icon-scissors.svg);
     background-repeat: no-repeat;
     background-position: center;
     display: grid;
