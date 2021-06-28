@@ -117,24 +117,26 @@ body {
     "you     house"
     "left    right"
     "bottom bottom";
-    row-gap: 3vw;
+    row-gap: 3vh;
     place-content: center center;
     position: relative;
 }
 
-#you-chose {
+#you-picked {
     display: grid;
     grid-area: you;
     justify-self: center; 
     font-size: 1.5rem;
+    color: #ffff;
     opacity: 0;
 }
 
-#house-chose {
+#house-picked {
     display: grid;
     grid-area: house;
     justify-self: center; 
     font-size: 1.5rem;
+    color: #ffff;
     opacity: 0;
 }
 
@@ -192,6 +194,7 @@ body {
     display: grid;
     justify-content: center;
     letter-spacing: 1px;
+    color: #ffff;
 }
 
 #play-again {

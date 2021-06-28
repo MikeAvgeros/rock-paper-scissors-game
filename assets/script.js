@@ -79,8 +79,8 @@ function displayCurrentChoices(playerPick, computerPick) {
         playerChoice.style.gridArea = 'bottom';
         playerChoice.style.marginBottom = '10rem';
     } else {
-        const youChose = document.querySelector('#you-chose');
-        const houseChose = document.querySelector('#house-chose');
+        const youChose = document.querySelector('#you-picked');
+        const houseChose = document.querySelector('#house-picked');
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'left';
         playerChoice.style.marginBottom = '6.25rem';
