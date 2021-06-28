@@ -119,7 +119,7 @@ body {
     "left    right"
     "...... ......"
     "bottom bottom";
-    row-gap: 5vh;
+    row-gap: 5vw;
     place-content: center center;
     position: relative;
 }
@@ -191,10 +191,10 @@ body {
 }
 
 .game__result {
-    padding-bottom: 5rem;
     grid-area: result;
     height: 20vh;
     display: grid;
+    place-self: center center;
     justify-content: center;
     text-align: center;
     letter-spacing: 1px;
@@ -202,17 +202,19 @@ body {
 }
 
 #play-again {
+    display: grid;
+    justify-self: center;
+    align-self: center;
     border-radius: 10px;
     width: fit-content;
     padding: 10px 35px;
     font-size: 1.5rem;
-    margin-top: 1rem;
 }
 
 .game__rules__button {
     grid-area: rules;
     display: grid;
-    place-content: end end;
+    place-content: end center;
 }
 
 .game_rules_button--modal{
@@ -304,6 +306,9 @@ body {
     .game__header {
         width: 100%;
     }
+    .game__block--wrapper{
+        row-gap: 5vh;
+    }
     .modal__content{
         width: 30%;
         min-width: 350px;
@@ -322,5 +327,8 @@ body {
     }
     .rule__flex{
         order: 3;
+    }
+    .game__rules__button {
+        place-content: end end;
     }
 }
