@@ -111,11 +111,12 @@ body {
     display: grid;
     grid-area: game;
     padding-top: 10rem;
-    grid-template-rows: .5fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "you     house"
     "left    right"
+    "...... ......"
     "bottom bottom";
     row-gap: 3vh;
     place-content: center center;
