@@ -54,6 +54,7 @@ body {
     padding-top: 1rem;
     display: grid;
     grid-template-rows: 20% 40% 10% 15% 5%;
+    row-gap: 1rem;
     grid-template-columns: 100%;
     grid-template-areas:
     "header"
@@ -110,7 +111,7 @@ body {
 .game__block--wrapper{
     display: grid;
     grid-area: game;
-    padding-top: 10rem;
+    padding-top: 7.5rem;
     grid-template-rows: .5fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -118,7 +119,7 @@ body {
     "left    right"
     "...... ......"
     "bottom bottom";
-    row-gap: 3vh;
+    row-gap: 5vh;
     place-content: center center;
     position: relative;
 }
@@ -190,6 +191,7 @@ body {
 }
 
 .game__result {
+    padding-bottom: 5rem;
     grid-area: result;
     height: 20vh;
     display: grid;
@@ -200,16 +202,32 @@ body {
 
 #play-again {
     border-radius: 10px;
+    padding: .6rem 1.2rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .game__rules__button {
     grid-area: rules;
+    display: grid;
+    place-content: end end;
+}
+
+.game_rules_button--modal{
+    color: whitesmoke;
+    border: 3px solid var(--headerOutline);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 10px 35px;
+    display: grid;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .attribution {
     grid-area: attribution;
-    padding-top: 4rem;
     font-size: 12px;
     text-align: center;
 }
@@ -218,11 +236,89 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
+.modal__window {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    background-color: #00000098;
+}
+
+.show {
+    display: flex; 
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    background-color:whitesmoke;
+    width: 100%;
+    height: 100vh;
+    padding: 25px;
+}
+
+.modal_title_flex {
+    color: var(--darkText);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    order: 1
+}
+
+.icon__flex {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3
+}
+
+.rule__flex {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    order: 2
+}
+
+.rule__svg {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 @media (min-width:750px) {
     .game {
         width: 50%;
     }
     .game__header {
         width: 100%;
+    }
+    .modal__content{
+        width: 30%;
+        min-width: 350px;
+        height: auto;
+        border-radius: 5px;
+    }
+    .modal_title_flex{
+        width: 80%;
+        text-align: left;
+    }
+    .icon__flex{
+        width: 20%;
+        justify-content: flex-end;
+        align-items: center;
+        order: 2
+    }
+    .rule__flex{
+        order: 3;
     }
 }

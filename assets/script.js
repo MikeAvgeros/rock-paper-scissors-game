@@ -138,3 +138,10 @@ function draw() {
         location.reload();
     });
 }
+  
+document.getElementById("rule-button").onclick = function() {toggle_modal()};
+document.getElementById("close__button").onclick = function() {toggle_modal()};
+
+function toggle_modal(){
+    document.getElementById("modal-rules").classList.toggle("show");
+}
