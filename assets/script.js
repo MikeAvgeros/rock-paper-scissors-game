@@ -116,8 +116,6 @@ function win() {
 function lose() {
     if (userScore > 0) {
         userScore--;
-    } else {
-        useScore = 0;
     }
     saveToLocalStorage();
     updateScore();
