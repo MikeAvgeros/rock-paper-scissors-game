@@ -77,7 +77,7 @@ function displayCurrentChoices(playerPick, computerPick) {
     if (isDraw) {
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'bottom';
-        playerChoice.style.marginBottom = '10rem';
+        playerChoice.style.marginBottom = '15rem';
     } else {
         const youChose = document.querySelector('#you-picked');
         const houseChose = document.querySelector('#house-picked');
