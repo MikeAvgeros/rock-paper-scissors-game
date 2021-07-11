@@ -43,7 +43,8 @@ function getWinner(playerPick) {
             } else if (computerPick === 'scissors') {
                 setTimeout(lose, 2500);
             } else {
-                draw();
+                isDraw = true;
+                setTimeout(draw, 2500);
             }
             break;
         case 'rock':
@@ -52,7 +53,8 @@ function getWinner(playerPick) {
             } else if (computerPick === 'paper') {
                 setTimeout(lose, 2500);
             } else {
-                draw();
+                isDraw = true;
+                setTimeout(draw, 2500);
             }
             break;
         case 'scissors':
@@ -61,7 +63,8 @@ function getWinner(playerPick) {
             } else if (computerPick === 'rock') {
                 setTimeout(lose, 2500);
             } else {
-                draw();
+                isDraw = true;
+                setTimeout(draw, 2500);
             }
             break;
         default:
@@ -72,33 +75,35 @@ function getWinner(playerPick) {
 }
 
 function displayCurrentChoices(playerPick, computerPick) {
-    let playerChoice = document.getElementById(playerPick);
-    let computerChoice = document.getElementById(computerPick);
+    let computerChoice;
+    let playerChoice;
+    const youChose = document.querySelector('#you-picked');
+    const houseChose = document.querySelector('#house-picked');
+    playerChoice = document.getElementById(playerPick);
+    if (isDraw) {
+        computerChoice = document.createElement('div');
+        computerChoice.setAttribute('class', 'game__block--choice');
+        computerChoice.setAttribute('id', `${computerPick}`);
+        gameBlock.appendChild(computerChoice);
+    } else {
+        computerChoice = document.getElementById(computerPick);
+    }
     playerChoice.style.opacity = "0";
     computerChoice.style.opacity = "0";
-    if (isDraw) {
-        playerChoice.style.display = 'grid';
-        playerChoice.style.gridArea = 'bottom';
-        playerChoice.style.marginBottom = '15rem';
+    playerChoice.style.display = 'grid';
+    playerChoice.style.gridArea = 'left';
+    playerChoice.style.marginBottom = '7.5rem';
+    computerChoice.style.display = 'grid';
+    computerChoice.style.gridArea = 'right';
+    computerChoice.style.marginBottom = '7.5rem';
+    youChose.style.opacity = "1";
+    houseChose.style.opacity = "1";
+    setTimeout(() => {
         playerChoice.style.opacity = "1";
-    } else {
-        const youChose = document.querySelector('#you-picked');
-        const houseChose = document.querySelector('#house-picked');
-        playerChoice.style.display = 'grid';
-        playerChoice.style.gridArea = 'left';
-        playerChoice.style.marginBottom = '7.5rem';
-        computerChoice.style.display = 'grid';
-        computerChoice.style.gridArea = 'right';
-        computerChoice.style.marginBottom = '7.5rem';
-        youChose.style.opacity = "1";
-        houseChose.style.opacity = "1";
-        setTimeout(() => {
-            playerChoice.style.opacity = "1";
-        }, 500)
-        setTimeout(() => {
-            computerChoice.style.opacity = "1";
-        }, 1500)
-    }
+    }, 500)
+    setTimeout(() => {
+        computerChoice.style.opacity = "1";
+    }, 1500)
 }
 
 function removeAllChoices() {
@@ -138,7 +143,6 @@ function lose() {
 }
 
 function draw() {
-    isDraw = true;
     gameResult.innerHTML = 
     `<h1>IT'S A DRAW</h1>
     <button id="play-again">Play Again</button>`;
