@@ -39,27 +39,27 @@ function getWinner(playerPick) {
     switch (playerPick) {
         case 'paper':
             if (computerPick === 'rock') {
-                win();
+                setTimeout(win, 2500);
             } else if (computerPick === 'scissors') {
-                lose();
+                setTimeout(lose, 2500);
             } else {
                 draw();
             }
             break;
         case 'rock':
             if (computerPick === 'scissors') {
-                win();
+                setTimeout(win, 2500);
             } else if (computerPick === 'paper') {
-                lose();
+                setTimeout(lose, 2500);
             } else {
                 draw();
             }
             break;
         case 'scissors':
             if (computerPick === 'paper') {
-                win();
+                setTimeout(win, 2500);
             } else if (computerPick === 'rock') {
-                lose();
+                setTimeout(lose, 2500);
             } else {
                 draw();
             }
@@ -74,10 +74,13 @@ function getWinner(playerPick) {
 function displayCurrentChoices(playerPick, computerPick) {
     let playerChoice = document.getElementById(playerPick);
     let computerChoice = document.getElementById(computerPick);
+    playerChoice.style.opacity = "0";
+    computerChoice.style.opacity = "0";
     if (isDraw) {
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'bottom';
         playerChoice.style.marginBottom = '15rem';
+        playerChoice.style.opacity = "1";
     } else {
         const youChose = document.querySelector('#you-picked');
         const houseChose = document.querySelector('#house-picked');
@@ -89,6 +92,12 @@ function displayCurrentChoices(playerPick, computerPick) {
         computerChoice.style.marginBottom = '6.25rem';
         youChose.style.opacity = "1";
         houseChose.style.opacity = "1";
+        setTimeout(() => {
+            playerChoice.style.opacity = "1";
+        }, 500)
+        setTimeout(() => {
+            computerChoice.style.opacity = "1";
+        }, 1500)
     }
 }
 

@@ -211,6 +211,10 @@ body {
     font-size: 1.5rem;
 }
 
+#play-again:hover {
+    color: red;
+}
+
 .game__rules__button {
     grid-area: rules;
     display: grid;
