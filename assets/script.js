@@ -86,10 +86,10 @@ function displayCurrentChoices(playerPick, computerPick) {
         const houseChose = document.querySelector('#house-picked');
         playerChoice.style.display = 'grid';
         playerChoice.style.gridArea = 'left';
-        playerChoice.style.marginBottom = '6.25rem';
+        playerChoice.style.marginBottom = '7.5rem';
         computerChoice.style.display = 'grid';
         computerChoice.style.gridArea = 'right';
-        computerChoice.style.marginBottom = '6.25rem';
+        computerChoice.style.marginBottom = '7.5rem';
         youChose.style.opacity = "1";
         houseChose.style.opacity = "1";
         setTimeout(() => {
