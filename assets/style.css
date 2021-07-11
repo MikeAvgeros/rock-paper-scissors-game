@@ -150,7 +150,7 @@ body {
     display: grid;
     grid-area: left;
     justify-self: center; 
-    box-shadow: 0px 0px 0px 10px hsl(230, 89%, 65%);
+    box-shadow: 0px 0px 0px 12px hsl(230, 89%, 65%);
     border-radius: 50%;
     background-color: #ffff;
     width: 100px;
@@ -166,7 +166,7 @@ body {
     display: grid;
     grid-area: right;
     justify-self: center;
-    box-shadow: 0px 0px 0px 10px hsl(349, 70%, 56%);
+    box-shadow: 0px 0px 0px 12px hsl(349, 70%, 56%);
     border-radius: 50%;
     background-color: #ffff;
     width: 100px;
@@ -182,12 +182,18 @@ body {
     display: grid;
     grid-area: bottom;
     justify-self: center;
-    box-shadow: 0px 0px 0px 10px hsl(40, 84%, 53%);
+    box-shadow: 0px 0px 0px 12px hsl(40, 84%, 53%);
     border-radius: 50%;
     background-color: #ffff;
     width: 100px;
     height: 100px;
     place-content: center center;
+}
+
+#scissors:hover,
+#rock:hover,
+#paper:hover {
+    background-color: slategray;
 }
 
 .game__result {
@@ -334,5 +340,10 @@ body {
     }
     .game__rules__button {
         place-content: end end;
+    }
+
+    #scissors, #rock, #paper {
+        width: 120px;
+        height: 120px;
     }
 }
